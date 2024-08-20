@@ -106,11 +106,11 @@
                 <div class="game-frame-container">
                     <div class="game" id="game">
                         <div class="splash-screen is-active" id="splashScreen">
-                            <img loading="lazy" class="splash-background" src="images/Agario-2.png" width="672" height="378" alt="Agario">
+                            <img loading="lazy" class="splash-background" src="images/paperio-2.png" width="672" height="378" alt="paperio">
                             <div class="splash-content">
                                 <div class="splash-thumbnail">
                                     <figure class="image is-square">
-                                        <img loading="lazy" src="images/Agario-2.png" width="146" height="146" alt="Yohoho 2">
+                                        <img loading="lazy" src="images/paperio-2.png" width="146" height="146" alt="paperio">
                                     </figure>
                                 </div>
                                 <button class="button is-play start-game" onclick="loadMainGame()"  aria-label="Start the game">
@@ -125,10 +125,10 @@
                     <div class="game-tools">
                         <div class="game-thumb">
                             <figure class="image is-square">
-                                <img loading="lazy" src="iamges/Agario-2.png" width="46" height="46" alt="Agario">
+                                <img loading="lazy" src="images/paperio-2.png" width="46" height="46" alt="paperio">
                             </figure>
                         </div>
-                        <div class="title is-4">Agario Unblocked</div>
+                        <div class="title is-4">Paper.io Unblocked</div>
                         <div class="buttons">
                             <button class="button is-thumbs-up is-square is-medium" aria-label="Up vote the game">
                                 <span class="icon">
@@ -2323,7 +2323,26 @@
         };
     </script>
     <script src="main28c8.js"></script>
-
+    <script>
+        function loadMainGame()
+        {
+            var html = `<iframe class="game-iframe iframeloader" id="game-area" src="https://git-unblocked.github.io/" style="width:100%;height:100%" scrolling="none" frameborder="0" allowfullscreen="" tabindex="0"></iframe>`;
+            document.getElementById("game").innerHTML = html;
+            document.getElementById('game').scrollIntoView();
+        }
+        function open_fullscreen() {
+            let game = document.getElementById("game-area");
+            if (game.requestFullscreen) {
+            game.requestFullscreen();
+            } else if (game.mozRequestFullScreen) { /* Firefox */
+            game.mozRequestFullScreen();
+            } else if (game.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            game.webkitRequestFullscreen();
+            } else if (game.msRequestFullscreen) { /* IE/Edge */
+             game.msRequestFullscreen();
+            }
+            };
+    </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-56RN1GD4MW"></script>
 <script>
